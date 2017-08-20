@@ -1,0 +1,213 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7818,        205]
+NotebookOptionsPosition[      7366,        186]
+NotebookOutlinePosition[      7723,        202]
+CellTagsIndexPosition[      7680,        199]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Set", " ", "default", " ", "directory"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Set", " ", "training", " ", "images", " ", "LABEL", " ", "and", " ", 
+     "Path"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"data", " ", "=", " ", 
+     RowBox[{"List", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<0\>\"", ",", " ", "\"\<./digits/0/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<1\>\"", ",", " ", "\"\<./digits/1/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<2\>\"", ",", " ", "\"\<./digits/2/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<3\>\"", ",", " ", "\"\<./digits/3/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<4\>\"", ",", " ", "\"\<./digits/4/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<5\>\"", ",", " ", "\"\<./digits/5/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<6\>\"", ",", " ", "\"\<./digits/6/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<7\>\"", ",", " ", "\"\<./digits/7/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<8\>\"", ",", " ", "\"\<./digits/8/*.jpg\>\""}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<9\>\"", ",", " ", "\"\<./digits/9/*.jpg\>\""}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"images", " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Import", "[", "#", "]"}], "&"}], "/@", 
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.6997668985112233`*^9, 3.6997670186015573`*^9}, {
+   3.699767138504096*^9, 3.699767141934387*^9}, {3.6997672350825133`*^9, 
+   3.6997672510907745`*^9}, 3.699767288163266*^9, {3.6997678651582637`*^9, 
+   3.6997678717169266`*^9}, {3.699828818831252*^9, 3.6998289044745092`*^9}, 
+   3.699828989957948*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"training", " ", "=", " ", 
+   RowBox[{"images", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"1", ";;", "400"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"test", " ", "=", " ", 
+   RowBox[{"images", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"401", ";;", "500"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"test", "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", 
+    RowBox[{"1", ";;", "5"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQ3bsj9P++Ca8d3T+eYNoPpKcc9mUH0Z7bHomD6Hfr
+90uD6EquGwoguu75S3UQzXLvsTaI/pj23wBEe1w3NwTRJ26aLAPR87Rtl4No
+sUl8MneBNP8GXVkQ7bcpxghErzu1AEwHhE8xB9GcSRdtQDTb5uIoEF32fHIs
+iO4yb+17AKQfWlr2g+gTupOmgOgLl4RmgOhjUcWLQXRDY/kSEM3ac2YFiNbL
+kVoNovez/NkIokPepW4F0UkPEveC6HV8oftBdNbZd0dAtG4Y61GwPadKz4Do
+opMc50H0S4WtEQ+B9Jrg8kgQzVk0Ix5EO6y/mgKif2TInwbRfk1eZ0A0AHUH
+wKg=
+  "]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"trainingLab", " ", "=", " ", 
+   RowBox[{"RandomSample", "[", 
+    RowBox[{"DeleteDuplicates", "[", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Thread", "/@", " ", 
+       RowBox[{"Thread", "[", 
+        RowBox[{"training", "\[Rule]", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}], "]"}], "]"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"testLab", " ", "=", " ", 
+   RowBox[{"RandomSample", "[", 
+    RowBox[{"DeleteDuplicates", "[", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Thread", "/@", " ", 
+       RowBox[{"Thread", "[", 
+        RowBox[{"test", "\[Rule]", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}], "]"}], "]"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"testLab", "[", 
+  RowBox[{"[", 
+   RowBox[{"1", ";;", "10"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.699768629177658*^9, {3.6998292294062443`*^9, 3.6998292400549865`*^9}, {
+   3.69982930934544*^9, 3.699829346870746*^9}, {3.6998302253757367`*^9, 
+   3.6998302255281754`*^9}, {3.6998360298222513`*^9, 3.699836036697774*^9}, {
+   3.699836071615432*^9, 3.6998360739549704`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", " ", "=", " ", 
+   RowBox[{"Classify", "[", 
+    RowBox[{"trainingLab", ",", " ", 
+     RowBox[{"Method", "->", "\"\<NeuralNetwork\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cm", " ", "=", " ", 
+   RowBox[{"ClassifierMeasurements", "[", 
+    RowBox[{"c", ",", "testLab"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6997677088146577`*^9, 3.6997677368373337`*^9}, {
+   3.6997678178031693`*^9, 3.699767853063473*^9}, 3.699767913787588*^9, {
+   3.69976812562121*^9, 3.69976815086493*^9}, {3.699768217934231*^9, 
+   3.699768224870507*^9}, {3.699768272416258*^9, 3.699768277028075*^9}, {
+   3.699768386354367*^9, 3.699768391583372*^9}, {3.6997684817984085`*^9, 
+   3.6997684844455023`*^9}, {3.69982941676545*^9, 3.699829421795377*^9}, {
+   3.6998395639717913`*^9, 3.69983956683727*^9}, {3.6998397245915585`*^9, 
+   3.699839730943948*^9}, {3.6998397726255856`*^9, 3.699839787883009*^9}, {
+   3.6998398226297607`*^9, 3.6998398319460464`*^9}, {3.6998398675438385`*^9, 
+   3.699839872234085*^9}, {3.69983991420636*^9, 3.699839926966225*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"cm", "[", "\"\<Accuracy\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"cm", "[", "\"\<ConfusionMatrixPlot\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.6997679630487213`*^9, 3.6997679727490206`*^9}, {
+  3.699768181757824*^9, 3.6997681820701876`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"cm", "[", "\"\<Precision\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"cm", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Examples\>\"", ",", 
+    RowBox[{"\"\<7\>\"", "\[Rule]", "\"\<4\>\""}]}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6998310491797233`*^9, 3.699831055555434*^9}, 
+   3.6998312385929155`*^9, {3.699832440312714*^9, 3.6998324706288247`*^9}, {
+   3.6998326474449368`*^9, 3.69983268251222*^9}, {3.69983272418855*^9, 
+   3.6998327259044504`*^9}, {3.6998355290042067`*^9, 3.699835602620448*^9}, {
+   3.699835776291811*^9, 3.699835779205518*^9}, {3.6998358292196865`*^9, 
+   3.6998358331116962`*^9}}]
+},
+WindowSize->{1280, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (2016\:5e742\:670825\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2540, 60, 404, "Input"],
+Cell[3101, 82, 956, 27, 124, "Input"],
+Cell[4060, 111, 1273, 32, 108, "Input"],
+Cell[5336, 145, 1109, 20, 86, "Input"],
+Cell[6448, 167, 275, 4, 52, "Input"],
+Cell[6726, 173, 636, 11, 52, "Input"]
+}
+]
+*)
+
